@@ -2,12 +2,6 @@ import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-/*
-  Generated class for the AuthServiceProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 export class User {
 
   email: string;
@@ -30,7 +24,7 @@ export class AuthServiceProvider {
       return Observable.throw("Please insert credentials")
     } else {
       return Observable.create(observer => {
-        let access = (credentials.email === "ben" && credentials.password === "123")
+        let access = (credentials.email === "1" && credentials.password === "1")
         this.currentUser = new User('ben@dev.co', 'ben');
         observer.next(access);
         observer.complete();
